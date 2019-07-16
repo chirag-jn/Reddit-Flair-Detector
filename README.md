@@ -40,3 +40,11 @@ Heroku App: redditflair.herokuapp.com
     * Body of Subreddit (body)
     * Subreddit Author (author)
     * Top Comments (comments)
+
+## MongoDB
+1. MongoDB Atlas
+2. Email: chiragjn120@gmail.com
+3. Project name: redditflair
+4. Username: Precog
+5. Password: Div@01234
+6. sudo service mongodb start
