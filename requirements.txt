@@ -2,3 +2,5 @@ praw
 pandas
 dnspython
 pymongo
+flask
+gunicorn
