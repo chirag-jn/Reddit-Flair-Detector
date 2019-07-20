@@ -48,3 +48,9 @@ Heroku App: redditflair.herokuapp.com
 4. Username: Precog
 5. Password: Div@01234
 6. sudo service mongodb start
+
+
+## Analyzing Title, Body and Comments
+https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
+punkt,stopwords, install via nltk
+https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "naiveBayesnew.py", line 6, in <module>
+    import pandas as pd
+  File "/usr/local/lib/python3.6/dist-packages/pandas/__init__.py", line 42, in <module>
+    from pandas.core.api import *
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/api.py", line 26, in <module>
+    from pandas.core.groupby import Grouper
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/groupby/__init__.py", line 1, in <module>
+    from pandas.core.groupby.groupby import GroupBy  # noqa: F401
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/groupby/groupby.py", line 37, in <module>
+    from pandas.core.frame import DataFrame
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/frame.py", line 290, in <module>
+    class DataFrame(NDFrame):
+  File "/usr/local/lib/python3.6/dist-packages/pandas/core/frame.py", line 4452, in DataFrame
+    @Appender(_shared_docs['notna'] % _shared_doc_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/util/_decorators.py", line 314, in __call__
+    func.__doc__ = dedent(self.join.join(docitems))
+  File "/usr/lib/python3.6/textwrap.py", line 431, in dedent
+    indents = _leading_whitespace_re.findall(text)
+KeyboardInterrupt
