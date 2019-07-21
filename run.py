@@ -17,19 +17,20 @@ movies = []
 # 		self.imdbId = key4
 # 		self.plot = key5
 
-# @app.route("/results", methods=['GET','POST'])
-# def results():
-# 	global movies
-# 	global length
-# 	if request.method == 'POST':
-
-# 		# print("length", length)
-# 		answer1 = {}
-# 		for i in range(length):
-# 			answer1[movies[i].imdbId] = request.form['rating_'+str(i+1)]
-# 		a = user_user(answer1)
-# 		b = item_item(answer1)
-# 		return render_template('results.html', message_user=a, message_item=b)
+@app.route("/", methods=['POST'])
+def results():
+	# global movies
+	# global length
+	if request.method == 'POST':
+		# result = request.form
+		subredditurl = request.form['subredditurl']
+		# print("length", length)
+		# answer1 = {}
+		# for i in range(length):
+		# 	answer1[movies[i].imdbId] = request.form['rating_'+str(i+1)]
+		# a = user_user(answer1)
+		# b = item_item(answer1)
+		return render_template('results.html', subreddit = subredditurl)
 
 @app.route("/")
 def home():
@@ -45,11 +46,12 @@ def home():
 	# length = len(movies)
 	# # print(lengthMovies)
 	# return render_template('movies.html', data=movies)
-    return "Hello World!"
+    # return "Hello World!"
+	return render_template('index.html')
 
 if __name__ == "__main__":
 	# myClient = pym.MongoClient("mongodb://admin:Div%401234@movietimebot-shard-00-00-jttos.mongodb.net:27017,movietimebot-shard-00-01-jttos.mongodb.net:27017,movietimebot-shard-00-02-jttos.mongodb.net:27017/test?ssl=true&replicaSet=movietimebot-shard-0&authSource=admin&retryWrites=true")
 	# moviesDB = myClient["movietime"]
 	# myMovies = moviesDB["movies"]
 	# print(myMovies)
-	app.run(threaded=True)
+	app.run(debug=True, threaded=True)
