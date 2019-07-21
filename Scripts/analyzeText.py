@@ -58,9 +58,9 @@ def getData():
 
 def processText():
 	getData()
-	textProcessor = preProcessText()
-	for i in processColumns:
-		subreddits[i] = textProcessor.processTextList(subreddits[i])
+	# textProcessor = preProcessText()
+	# for i in processColumns:
+	# 	subreddits[i] = textProcessor.processTextList(subreddits[i])
 		
 if __name__ == '__main__':
 	processText()
