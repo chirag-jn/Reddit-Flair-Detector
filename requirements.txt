@@ -5,4 +5,6 @@ pymongo
 flask
 gunicorn
 sklearn
+nltk
+numpy
 
