@@ -5,7 +5,10 @@
     <title>Results</title>
 </head>
 <body>
- <!-- <form action="" method="post">
+    <form method="post" action="">
+        <input type="submit" name="submit_button" value="Home">
+    </form>    
+    <!-- <form action="" method="post">
         <p>
             <label for="subredditurl">Subreddit URL</label>
             <input type="text" name="subredditurl">
@@ -18,12 +21,16 @@
             <input type="submit">
         </p>
     </form> -->
-    {% if title %}
-        <p>{{ title }}</p>
+    {% if data.title %}
+        <h1>{{ data.title }}</h1>
     {% endif %}
 
-    {% if url %}  
-        <p>{{ url }}</p>
+    {% if data.body %}     
+        <p>{{ data.body }}</p>
+    {% endif %}
+
+    {% if data.url %}  
+        <p>{{ data.url }}</p>
     {% endif %}
 
     <!-- {% for item in data %}

@@ -8,17 +8,29 @@ def fetch_data(url_inp):
                         username = rkey.username,
                         passwor = rkey.password)
 
-    # print('url', url_inp)
-
     subreddit = reddit.submission(url = url_inp)
-
-    # print('url2', subreddit)
 
     data = {}
 
-    data['title'] = subreddit.title
-    data['url'] = subreddit.url
-
-    # print(data)
-
+    data["flair"] = (subreddit.flair)
+    data["title"] = (subreddit.title)
+    data["score"] = (subreddit.score)
+    data["id"] = (subreddit.id)
+    data["url"] = (subreddit.url)
+    data["comms_num"] = (subreddit.num_comments)
+    data["created"] = (subreddit.created)
+    data['body'] = (subreddit.selftext)
+    data["author"] = (subreddit.author)
+    subreddit.comments.replace_more(limit = 0) 
+    temp_comment = ''
+    comment_count = 0
+    comment_arr = []
+    for comment_iter in subreddit.comments:
+        temp_comment+= ' ' + comment_iter.body
+        comment_count+=1
+        comment_arr.append(comment_iter.body)
+        if(comment_count==50):
+            break
+    data["comments"] = temp_comment
+    data['comment_arr'] = comment_arr
     return data
