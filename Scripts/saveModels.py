@@ -2,7 +2,7 @@ import pymongo as pym
 import dns
 import Scripts.redditKeys as rkey
 from pickle import dumps, loads
-from joblib import dump
+# from joblib import dump
 
 url = 'mongodb+srv://' + rkey.mongoDB_Username + ':' + rkey.mongoDB_pass + '@redditflaircluster-jakts.mongodb.net/test?retryWrites=true&w=majority'
 
@@ -13,7 +13,7 @@ modelDB = redditDB["modelData"]
 def saveModel(model, model_name):
     print('Saving Model:', model_name)
     global modelDB
-    dump(model, model_name+'.joblib')
+    # dump(model, model_name+'.joblib')
     saved_model = dumps(model)
     modelDB.insert_one({model_name: saved_model, 'name': model_name})
     print('Model Saved:', model_name)
