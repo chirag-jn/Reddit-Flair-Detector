@@ -1,4 +1,3 @@
-#! usr/bin/env python3
 import praw
 import pandas as pd
 import datetime as dt
@@ -63,7 +62,6 @@ def fetch_data():
     topics_data = pd.DataFrame(topics_dict)
     _timestamp = topics_data["created"].apply(get_date)
     topics_data = topics_data.assign(timestamp = _timestamp)
-    # print(topics_data)
     file_name = 'reddit_flair_data.csv'
     topics_data.to_csv(file_name, index=False)    
 
