@@ -15,21 +15,21 @@ my_model = None
 def saveModel(model, model_name):
     print('Saving Model:', model_name)
     global modelDB, my_model
-    my_model = model
+    # my_model = model
     # dump(model, model_name+'.joblib')
-    # saved_model = dumps(model)
-    # modelDB.insert_one({model_name: saved_model, 'name': model_name})
+    saved_model = dumps(model)
+    modelDB.insert_one({model_name: saved_model, 'name': model_name})
     print('Model Saved:', model_name)
 
 def loadModel(model_name):
     print('Loading Model:', model_name)
-    # global modelDB
-    # data = modelDB.find({'name': model_name})
-    # json_data = {}
-    # for i in data:
-    #     json_data = i
-    # saved_model = json_data[model_name]
-    global my_model
+    global modelDB
+    data = modelDB.find({'name': model_name})
+    json_data = {}
+    for i in data:
+        json_data = i
+    saved_model = json_data[model_name]
+    # global my_model
     print('Model Loaded:', model_name)
-    # return load(model_name+'.joblib')
-    return my_model
+    return loads(saved_model)
+    # return my_model
