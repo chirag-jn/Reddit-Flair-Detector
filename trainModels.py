@@ -34,5 +34,6 @@ def getResults():
         acc_score = ForesttrainResults(x_train, x_test, y_train, y_test, flairs)
         print(input_labels[i], ':', acc_score)
 
-train()
+if __name__=='__main__':
+        train()
 # getResults()
