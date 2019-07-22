@@ -1,12 +1,14 @@
 import praw
 import Scripts.redditKeys as rkey
 
+reddit = praw.Reddit(client_id = rkey.script,
+                    client_secret = rkey.secret,
+                    user_agent = rkey.name,
+                    username = rkey.username,
+                    passwor = rkey.password)
+
 def fetch_data(url_inp):
-    reddit = praw.Reddit(client_id = rkey.script,
-                        client_secret = rkey.secret,
-                        user_agent = rkey.name,
-                        username = rkey.username,
-                        passwor = rkey.password)
+    global reddit
 
     subreddit = reddit.submission(url = url_inp)
 
@@ -33,4 +35,5 @@ def fetch_data(url_inp):
             break
     data["comments"] = temp_comment
     data['comment_arr'] = comment_arr
+    print('flair is: ', subreddit.flair)
     return data

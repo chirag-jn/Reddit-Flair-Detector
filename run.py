@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pymongo as pym
 from Scripts.testLink import fetch_data
+from Scripts.predictFlair import predictflair
 
 app = Flask(__name__)
 
@@ -11,6 +12,7 @@ def results():
 			return render_template('index.html')
 		subredditurl = request.form['subredditurl']
 		post_data = fetch_data(subredditurl)
+		post_data['flair'] = predictflair(post_data)
 		return render_template('results.html', data = post_data)
 
 @app.route("/")

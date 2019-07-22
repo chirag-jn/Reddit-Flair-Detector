@@ -1,5 +1,5 @@
 import csv
-from preProcessClass import preProcessText
+from Scripts.preProcessClass import preProcessText
 
 subreddits = {}
 
@@ -7,7 +7,7 @@ processColumns = ['title', 'body', 'comments']
 
 def getData():
 	global subreddits
-	with open('Data/reddit_flair_data.csv', 'r') as data_file:
+	with open('Scripts/Data/reddit_flair_data.csv', 'r') as data_file:
 		data_reader = csv.reader(data_file, delimiter=',')
 		line_count = 0
 		tag1=''
