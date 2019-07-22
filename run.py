@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import pymongo as pym
+from Scripts.testLink import fetch_data
 
 app = Flask(__name__)
 
@@ -24,13 +25,15 @@ def results():
 	if request.method == 'POST':
 		# result = request.form
 		subredditurl = request.form['subredditurl']
+		# print(subredditurl)
+		post_data = fetch_data(subredditurl)
 		# print("length", length)
 		# answer1 = {}
 		# for i in range(length):
 		# 	answer1[movies[i].imdbId] = request.form['rating_'+str(i+1)]
 		# a = user_user(answer1)
 		# b = item_item(answer1)
-		return render_template('results.html', subreddit = subredditurl)
+		return render_template('results.html', title = post_data['title'], url = post_data['url'])
 
 @app.route("/")
 def home():

@@ -18,8 +18,12 @@
             <input type="submit">
         </p>
     </form> -->
-    {% if subreddit %}
-        <p>{{ subreddit }}</p>
+    {% if title %}
+        <p>{{ title }}</p>
+    {% endif %}
+
+    {% if url %}  
+        <p>{{ url }}</p>
     {% endif %}
 
     <!-- {% for item in data %}
