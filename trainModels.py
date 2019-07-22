@@ -1,4 +1,8 @@
 from Scripts.naiveBayes import NBtrain, NBtrainResults
+from Scripts.linearsvm import LSVMtrain, LSVMtrainResults
+from Scripts.regression import REGRtrain, REGRtrainResults
+from Scripts.randomforest import Foresttrain, ForesttrainResults
+from Scripts.mlpclassifier import MLPtrain, MLPtrainResults
 from sklearn.model_selection import train_test_split
 import Scripts.analyzeText as dataset
 import pandas as pd
@@ -12,7 +16,7 @@ def train():
     inputs = feature_combine
     x_train, x_test, y_train, y_test = train_test_split(inputs, outputs, test_size=0.2, random_state=42)
 
-    NBtrain(x_train, x_test, y_train, y_test)
+    Foresttrain(x_train, x_test, y_train, y_test)
 
 def getResults():
     dataset.processText()
@@ -27,7 +31,8 @@ def getResults():
     for i in range(len(input_features)):
         inputs = input_features[i]
         x_train, x_test, y_train, y_test = train_test_split(inputs, outputs, test_size=0.2, random_state=42)
-        acc_score = NBtrainResults(x_train, x_test, y_train, y_test, flairs)
+        acc_score = ForesttrainResults(x_train, x_test, y_train, y_test, flairs)
         print(input_labels[i], ':', acc_score)
 
 train()
+# getResults()

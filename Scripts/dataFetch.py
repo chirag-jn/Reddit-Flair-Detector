@@ -4,7 +4,7 @@ import datetime as dt
 import redditKeys as rkey
 
 subredditName = 'india'
-numberReddits = 100
+numberReddits = 10
 
 flairs = ['Political', 'Non-Political', 'AskIndia', 'Reddiquette', 'Science & Technology', 'Policy & Economy', 'Finance & Business', 'Entertainment', 'Sports', 'Food', 'Photography', 'AMA']
 
@@ -16,7 +16,7 @@ def fetch_data():
                         client_secret = rkey.secret,
                         user_agent = rkey.name,
                         username = rkey.username,
-                        passwor = rkey.password)
+                        password = rkey.password)
 
     subreddit = reddit.subreddit(subredditName)
 

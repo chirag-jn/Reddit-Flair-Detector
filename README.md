@@ -54,3 +54,111 @@ Heroku App: redditflair.herokuapp.com
 https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
 punkt,stopwords, install via nltk
 https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
+
+
+## Results
+
+### Naive Bayes
+| Author | 0.17154811715481172 |
+|---|---|
+| Title | 0.502092050209205 |
+|---|---|
+| Comments | 0.39748953974895396 |
+|---|---|
+| Body | 0.2175732217573222 |
+|---|---|
+| ID | 0.06694560669456066 |
+|---|---|
+| URL | 0.20920502092050208 |
+|---|---|
+| Number of Comments | 0.058577405857740586 |
+|---|---|
+| Score | 0.0794979079497908 |
+|---|---|
+| Title+Comments+URL | 0.497907949790795 |
+|---|---|
+| Title+Comments | 0.5062761506276151 |
+
+### Logistic Regression
+| Author | 3 |
+|---|---|
+| Title | 5 |
+|---|---|
+| Comments | 5 |
+|---|---|
+| Body | 5 |
+|---|---|
+| ID | 5 |
+|---|---|
+| URL | 5 |
+|---|---|
+| Number of Comments | 5 |
+|---|---|
+| Score | 5 |
+|---|---|
+| Title+Comments+URL | 5 |
+|---|---|
+| Title+Comments | 5 |
+
+### Linear Support Vector Machine
+| Author | 3 |
+|---|---|
+| Title | 5 |
+|---|---|
+| Comments | 5 |
+|---|---|
+| Body | 5 |
+|---|---|
+| ID | 5 |
+|---|---|
+| URL | 5 |
+|---|---|
+| Number of Comments | 5 |
+|---|---|
+| Score | 5 |
+|---|---|
+| Title+Comments+URL | 5 |
+|---|---|
+| Title+Comments | 5 |
+
+### MLP Classifier
+| Author | 3 |
+|---|---|
+| Title | 5 |
+|---|---|
+| Comments | 5 |
+|---|---|
+| Body | 5 |
+|---|---|
+| ID | 5 |
+|---|---|
+| URL | 5 |
+|---|---|
+| Number of Comments | 5 |
+|---|---|
+| Score | 5 |
+|---|---|
+| Title+Comments+URL | 5 |
+|---|---|
+| Title+Comments | 5 |
+
+### Random Forest
+| Author | 3 |
+|---|---|
+| Title | 5 |
+|---|---|
+| Comments | 5 |
+|---|---|
+| Body | 5 |
+|---|---|
+| ID | 5 |
+|---|---|
+| URL | 5 |
+|---|---|
+| Number of Comments | 5 |
+|---|---|
+| Score | 5 |
+|---|---|
+| Title+Comments+URL | 5 |
+|---|---|
+| Title+Comments | 5 |
