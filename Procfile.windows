@@ -1,2 +1,1 @@
-web: python initSetup.py
 web: python run.py
