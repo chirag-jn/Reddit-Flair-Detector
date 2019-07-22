@@ -10,10 +10,13 @@ myClient = pym.MongoClient(url)
 redditDB = myClient["redditflair"]
 modelDB = redditDB["modelData"]
 
+my_model = None
+
 def saveModel(model, model_name):
     print('Saving Model:', model_name)
-    global modelDB
-    dump(model, model_name+'.joblib')
+    global modelDB, my_model
+    my_model = model
+    # dump(model, model_name+'.joblib')
     # saved_model = dumps(model)
     # modelDB.insert_one({model_name: saved_model, 'name': model_name})
     print('Model Saved:', model_name)
@@ -26,5 +29,7 @@ def loadModel(model_name):
     # for i in data:
     #     json_data = i
     # saved_model = json_data[model_name]
+    global my_model
     print('Model Loaded:', model_name)
-    return load(model_name+'.joblib')
+    # return load(model_name+'.joblib')
+    return my_model
