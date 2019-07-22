@@ -23,7 +23,7 @@ def saveModel(model, model_name):
 
 def loadModel(model_name):
     print('Loading Model:', model_name)
-    global modelDB
+    global modelDB, my_model
     # data = modelDB.find({'name': model_name})
     # json_data = {}
     # for i in data:
