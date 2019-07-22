@@ -4,3 +4,5 @@ dnspython
 pymongo
 flask
 gunicorn
+sklearn
+

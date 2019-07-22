@@ -35,5 +35,4 @@ def fetch_data(url_inp):
             break
     data["comments"] = temp_comment
     data['comment_arr'] = comment_arr
-    print('flair is: ', subreddit.flair)
     return data
