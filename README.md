@@ -60,6 +60,7 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 
 ### Naive Bayes
 | Feature | Accuracy (0-1) |
+| --- |:---:|
 | Author | 0.17154811715481172 |
 | Title | 0.502092050209205 |
 | Comments | 0.39748953974895396 |
@@ -73,6 +74,7 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 
 ### Logistic Regression
 | Feature | Accuracy (0-1) |
+| --- |:---:|
 | Author | 0.17154811715481172 |
 | Title | 0.5313807531380753 |
 | Comments | 0.5397489539748954 |
@@ -86,6 +88,7 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 
 ### Linear Support Vector Machine
 | Feature | Accuracy (0-1) |
+| --- |:---:|
 | Author | 0.1799163179916318 |
 | Title | 0.5774058577405857 |
 | Comments | 0.5313807531380753 |
@@ -99,6 +102,7 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 
 ### MLP Classifier
 | Feature | Accuracy (0-1) |
+| --- |:---:|
 | Author | 0.1799163179916318 |
 | Title | 0.34309623430962344 |
 | Comments | 0.4100418410041841 |
@@ -112,6 +116,7 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 
 ### Random Forest
 | Feature | Accuracy (0-1) |
+| --- |:---:|
 | Author | 0.16736401673640167 |
 | Title | 0.5146443514644351 |
 | Comments | 0.5313807531380753 |
