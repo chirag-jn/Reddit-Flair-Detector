@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer, T
 import Scripts.analyzeText as dataset
 import pandas as pd
 import numpy as np
+from joblib import dump, load
 
 dataset.processText()
 mapp = dataset.subreddits
@@ -27,17 +28,19 @@ nb = Pipeline([('vect', CountVectorizer()),
             ('clf', MultinomialNB()),
             ])   
 
-def train():
+def NBtrain():
     global nb, x_train, y_train
     nb.fit(x_train, y_train)
+    dump(nb, 'naiveBayes.joblib') 
 
 # print(y_pred)
 # print('accuracy %s' % accuracy_score(y_pred, y_test))
 # print(classification_report(y_test, y_pred,target_names=flairs))
 
-def predict(elem):
-    global nb
-    train()
+def NBpredict(elem):
+    # global nb
+    # train()
+    nb = load('naiveBayes.joblib') 
     x_test = [elem]
     y_pred = nb.predict(x_test)
     return y_pred[0]

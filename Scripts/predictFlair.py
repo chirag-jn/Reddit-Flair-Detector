@@ -1,4 +1,4 @@
-from Scripts.naiveBayes import predict
+from Scripts.naiveBayes import NBpredict
 
 def predictflair(data):
-    return predict(data['comments'])
+    return NBpredict(data['comments'])
