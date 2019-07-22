@@ -2,24 +2,38 @@
 Reddit Flair Detector, created as a Technical Task for Precog's Interview.
 
 ## Heroku App
-redditflair.herokuapp.com
+https://redditflair.herokuapp.com/
 
 ## Steps to Run the App
-```bash
+```console
+git clone https://github.com/chirag-jn/Reddit-Flair-Detector
 sudo python3 -m pip install -m requirements.txt
+sudo service mongodb start
 python3 run.py
 ```
-2. Reddit username: jnchirag
-3. Reddit API Name: redditflair
-4. Keys mentioned in Scripts/redditKeys.py (not public, please mail for getting access to them)
-5. Scraping: http://www.storybench.org/how-to-scrape-reddit-with-python/
-6. Flairs: https://www.reddit.com/r/India/wiki/rules#wiki_post_flairs
 
-## Initial Setup
-1. Install pip
+Now, go to http://localhost:5000/
+
+## Dependencies
+1. praw
+2. pandas
+3. dnspython
+4. pymongo
+5. flask
+6. gunicorn
+7. sklearn
+8. nltk
+9. numpy
+
+## Credentials
+1. Reddit Username: jnchirag
+2. Reddit API Name: redditflair
+3. MongoDB Name: redditflair
+3. MongoDB App Username: Precog
+4. All the Keys are mentioned in Scripts/redditKeys.py
 
 ## Data Fetching
-1. We used the Praw API provided by Reddit for fetching subreddits of every flair.
+1. We used the Reddit Praw API provided by Reddit for fetching subreddits of every flair.
 2. The flairs which we included in our data are:
     * Political
     * Non-Political
@@ -46,17 +60,19 @@ python3 run.py
     * Subreddit Author (author)
     * Top Comments (comments)
 
-## MongoDB
-1. MongoDB Atlas
-2. Email: chiragjn120@gmail.com
-3. Project name: redditflair
-4. Username: Precog
-5. Password: Div@01234
-6. sudo service mongodb start
-
 
 ## Analyzing Title, Body and Comments
-
+1. I tested various Classification algorithms and found the accuracy in different cases using various features and group of features.
+2. Classification Algorithms used:
+    * Naive Bayes
+    * Logistic Regression
+    * Linear Support Vector Machines
+    * MLP Classifier
+    * Random Forest
+3. I found that Random Forest provided the best results when it came to accuracy. I used a combination of the features: 
+    * Title
+    * Comments
+4. The various accuracy results are mentioned below.
 
 
 ## Results
@@ -89,7 +105,7 @@ python3 run.py
 | Title + Comments + URL | 0.6401673640167364 |
 | Title + Comments | 0.6359832635983264 |
 
-### Linear Support Vector Machine
+### Linear Support Vector Machines
 | Feature | Accuracy (0-1) |
 | --- |:---:|
 | Author | 0.1799163179916318 |
@@ -137,3 +153,5 @@ python3 run.py
 #### References
 1. https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
 2. https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
+3. https://www.reddit.com/r/India/wiki/rules#wiki_post_flairs
+4. http://www.storybench.org/how-to-scrape-reddit-with-python/

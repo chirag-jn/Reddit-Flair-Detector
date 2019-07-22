@@ -7,4 +7,3 @@ gunicorn
 sklearn
 nltk
 numpy
-
