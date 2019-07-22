@@ -2300,6 +2300,10 @@
 .float-r {float: right;}
 
 
+/*[Next Line]
+----------
+*/
+.clear-next {clear: both;}
 /*[ Width & Height ]
 -----------------------------------------------------------
 */

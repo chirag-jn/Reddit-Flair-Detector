@@ -155,3 +155,4 @@ Now, go to http://localhost:5000/
 2. https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
 3. https://www.reddit.com/r/India/wiki/rules#wiki_post_flairs
 4. http://www.storybench.org/how-to-scrape-reddit-with-python/
+5. https://colorlib.com/wp/template/login-form-v5/

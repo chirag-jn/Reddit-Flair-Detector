@@ -24,4 +24,4 @@ if __name__ == "__main__":
 	# train()
 	# nltk.download('punkt')
 	# nltk.download('stopwords')
-	app.run(threaded=True)
+	app.run(debug=True, threaded=True)
