@@ -59,106 +59,66 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 ## Results
 
 ### Naive Bayes
+| Feature | Accuracy (0-1) |
 | Author | 0.17154811715481172 |
-|---|---|
 | Title | 0.502092050209205 |
-|---|---|
 | Comments | 0.39748953974895396 |
-|---|---|
 | Body | 0.2175732217573222 |
-|---|---|
 | ID | 0.06694560669456066 |
-|---|---|
 | URL | 0.20920502092050208 |
-|---|---|
 | Number of Comments | 0.058577405857740586 |
-|---|---|
 | Score | 0.0794979079497908 |
-|---|---|
 | Title+Comments+URL | 0.497907949790795 |
-|---|---|
 | Title+Comments | 0.5062761506276151 |
 
 ### Logistic Regression
-| Author | 3 |
-|---|---|
-| Title | 5 |
-|---|---|
-| Comments | 5 |
-|---|---|
-| Body | 5 |
-|---|---|
-| ID | 5 |
-|---|---|
-| URL | 5 |
-|---|---|
-| Number of Comments | 5 |
-|---|---|
-| Score | 5 |
-|---|---|
-| Title+Comments+URL | 5 |
-|---|---|
-| Title+Comments | 5 |
+| Feature | Accuracy (0-1) |
+| Author | 0.17154811715481172 |
+| Title | 0.5313807531380753 |
+| Comments | 0.5397489539748954 |
+| Body | 0.3891213389121339 |
+| ID | 0.058577405857740586 |
+| URL | 0.26778242677824265 |
+| Number of Comments | 0.09623430962343096 |
+| Score | 0.08368200836820083 |
+| Title + Comments + URL | 0.6401673640167364 |
+| Title + Comments | 0.6359832635983264 |
 
 ### Linear Support Vector Machine
-| Author | 3 |
-|---|---|
-| Title | 5 |
-|---|---|
-| Comments | 5 |
-|---|---|
-| Body | 5 |
-|---|---|
-| ID | 5 |
-|---|---|
-| URL | 5 |
-|---|---|
-| Number of Comments | 5 |
-|---|---|
-| Score | 5 |
-|---|---|
-| Title+Comments+URL | 5 |
-|---|---|
-| Title+Comments | 5 |
+| Feature | Accuracy (0-1) |
+| Author | 0.1799163179916318 |
+| Title | 0.5774058577405857 |
+| Comments | 0.5313807531380753 |
+| Body | 0.3598326359832636 |
+| ID | 0.07112970711297072 |
+| URL | 0.2217573221757322 |
+| Number of Comments | 0.07112970711297072 |
+| Score | 0.07112970711297072 |
+| Title+Comments+URL | 0.6276150627615062 |
+| Title+Comments | 0.6150627615062761 |
 
 ### MLP Classifier
-| Author | 3 |
-|---|---|
-| Title | 5 |
-|---|---|
-| Comments | 5 |
-|---|---|
-| Body | 5 |
-|---|---|
-| ID | 5 |
-|---|---|
-| URL | 5 |
-|---|---|
-| Number of Comments | 5 |
-|---|---|
-| Score | 5 |
-|---|---|
-| Title+Comments+URL | 5 |
-|---|---|
-| Title+Comments | 5 |
+| Feature | Accuracy (0-1) |
+| Author | 0.1799163179916318 |
+| Title | 0.34309623430962344 |
+| Comments | 0.4100418410041841 |
+| Body | 0.3389121338912134 |
+| ID | 0.06694560669456066 |
+| URL | 0.1799163179916318 |
+| Number of Comments | 0.10460251046025104 |
+| Score | 0.06694560669456066 |
+| Title + Comments + URL | 0.47280334728033474 |
+| Title + Comments | 0.41422594142259417 |
 
 ### Random Forest
-| Author | 3 |
-|---|---|
-| Title | 5 |
-|---|---|
-| Comments | 5 |
-|---|---|
-| Body | 5 |
-|---|---|
-| ID | 5 |
-|---|---|
-| URL | 5 |
-|---|---|
-| Number of Comments | 5 |
-|---|---|
-| Score | 5 |
-|---|---|
-| Title+Comments+URL | 5 |
-|---|---|
-| Title+Comments | 5 |
+| Feature | Accuracy (0-1) |
+| Author | 0.16736401673640167 |
+| Title | 0.5146443514644351 |
+| Comments | 0.5313807531380753 |
+| Body | 0.41422594142259417 |
+| ID | 0.058577405857740586 |
+| URL | 0.1799163179916318 |
+| Number of Comments | 0.100418410041841 |
+| Score | 0.0794979079497908 |
+| Title + Comments + URL | 0.6861924686192469 |
+| Title + Comments | 0.6903765690376569 |
