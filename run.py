@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import pymongo as pym
 from Scripts.testLink import fetch_data
 from Scripts.predictFlair import predictflair
+import nltk
 
 app = Flask(__name__)
 
@@ -20,4 +21,6 @@ def home():
 	return render_template('index.html')
 
 if __name__ == "__main__":
+	nltk.download('punkt')
+	nltk.download('stopwords')
 	app.run(debug=True, threaded=True)

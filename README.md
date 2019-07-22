@@ -1,9 +1,14 @@
 # Reddit-Flair-Detector
 Reddit Flair Detector, created as a Technical Task for Precog's Interview.
 
-Heroku App: redditflair.herokuapp.com
+## Heroku App
+redditflair.herokuapp.com
 
-1. Install all the required packages from requirements.txt `sudo python3 -m pip install -m requirements.txt`
+## Steps to Run the App
+```bash
+sudo python3 -m pip install -m requirements.txt
+python3 run.py
+```
 2. Reddit username: jnchirag
 3. Reddit API Name: redditflair
 4. Keys mentioned in Scripts/redditKeys.py (not public, please mail for getting access to them)
@@ -51,9 +56,7 @@ Heroku App: redditflair.herokuapp.com
 
 
 ## Analyzing Title, Body and Comments
-https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
-punkt,stopwords, install via nltk
-https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
+
 
 
 ## Results
@@ -127,3 +130,10 @@ https://towardsdatascience.com/multi-class-text-classification-model-comparison-
 | Score | 0.0794979079497908 |
 | Title + Comments + URL | 0.6861924686192469 |
 | Title + Comments | 0.6903765690376569 |
+
+#### Notes
+1. We won't use Body as a feature as few posts don't have any body present. So it makes our data inconsistent and hence, gives lower accuracy.
+
+#### References
+1. https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed
+2. https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
