@@ -5,5 +5,5 @@ from Scripts.randomforest import Forestpredict
 from Scripts.mlpclassifier import MLPpredict
 
 def predictflair(data):
-    # return NBpredict(data['comments'])
+    # Running Random Forest Algorithm for predicting data
     return Forestpredict(data['title'] + data['comments'])

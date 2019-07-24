@@ -1,3 +1,4 @@
+# Sample for showing the format of Reddit Keys and MongoDB Keys
 secret = '27 digit key here'
 script = '14 digit key here'
 name = 'App Name here'

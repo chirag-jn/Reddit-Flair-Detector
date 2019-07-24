@@ -6,6 +6,7 @@ subreddits = {}
 processColumns = ['title', 'body', 'comments']
 
 def getData():
+	# Using the reddit_flair_data.csv and storing the contents of the same in subreddits dictionary
 	global subreddits
 	with open('Scripts/Data/reddit_flair_data.csv', 'r') as data_file:
 		data_reader = csv.reader(data_file, delimiter=',')

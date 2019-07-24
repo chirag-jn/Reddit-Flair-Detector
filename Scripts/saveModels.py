@@ -12,6 +12,7 @@ modelDB = redditDB["modelData"]
 
 my_model = None
 
+# Dumping the Model
 def saveModel(model, model_name):
     print('Saving Model:', model_name)
     global modelDB, my_model
@@ -21,6 +22,7 @@ def saveModel(model, model_name):
     modelDB.insert_one({model_name: saved_model, 'name': model_name})
     print('Model Saved:', model_name)
 
+# Loading the Model
 def loadModel(model_name):
     print('Loading Model:', model_name)
     global modelDB

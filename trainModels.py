@@ -8,6 +8,7 @@ import Scripts.analyzeText as dataset
 import pandas as pd
 
 def train():
+	# Function used to train the desired model. We are using Random Forest as our model.
     dataset.processText()
     mapp = dataset.subreddits
     topics_data = pd.DataFrame(mapp)
@@ -19,6 +20,7 @@ def train():
     Foresttrain(x_train, x_test, y_train, y_test)
 
 def getResults():
+	# Function to check the accuracy which we get after running various algorithms on various parameters.
     dataset.processText()
     mapp = dataset.subreddits
     flairs = ['Political', 'Non-Political', 'AskIndia', 'Reddiquette', 'Science & Technology', 'Policy & Economy', 'Finance & Business', 'Entertainment', 'Sports', 'Food', 'Photography', 'AMA']
@@ -36,4 +38,3 @@ def getResults():
 
 if __name__=='__main__':
         train()
-# getResults()

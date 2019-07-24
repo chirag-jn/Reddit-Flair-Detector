@@ -1,4 +1,4 @@
-# Keys for Reddit API
+# Keys for Reddit API and MongoDB API
 # Not meant for Redistribution
 
 secret = '7xPRMWumJ3VvHpEUjIHLA4DkOHs'

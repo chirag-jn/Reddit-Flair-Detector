@@ -8,6 +8,7 @@ reddit = praw.Reddit(client_id = rkey.script,
                     passwor = rkey.password)
 
 def fetch_data(url_inp):
+	# Loading the Input URL and fetching data from the same
     global reddit
 
     subreddit = reddit.submission(url = url_inp)

@@ -6,6 +6,7 @@ import csv
 subreddits = []
 
 def getData():
+	# Getting data from CSV file and storing it in the global list
 	global subreddits
 	with open('Data/reddit_flair_data.csv', 'r') as data_file:
 		data_reader = csv.reader(data_file, delimiter=',')
@@ -39,6 +40,7 @@ def getData():
 				line_count += 1
 
 def setupDB():
+	# Connecting it to the MongoDB Atlas client and pushing data
 	global subreddits
 
 	getData()

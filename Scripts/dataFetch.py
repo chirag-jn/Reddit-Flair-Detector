@@ -4,7 +4,7 @@ import datetime as dt
 import redditKeys as rkey
 
 subredditName = 'india'
-numberReddits = 10
+numberReddits = 100
 
 flairs = ['Political', 'Non-Political', 'AskIndia', 'Reddiquette', 'Science & Technology', 'Policy & Economy', 'Finance & Business', 'Entertainment', 'Sports', 'Food', 'Photography', 'AMA']
 
@@ -12,6 +12,7 @@ def get_date(created):
     return dt.datetime.fromtimestamp(created)
 
 def fetch_data():
+    # Starting the Reddit API
     reddit = praw.Reddit(client_id = rkey.script,
                         client_secret = rkey.secret,
                         user_agent = rkey.name,
@@ -20,6 +21,7 @@ def fetch_data():
 
     subreddit = reddit.subreddit(subredditName)
 
+    # Dictionary for storing the content fetched using the API
     topics_dict = { "flair":[], 
                     "title":[], 
                     "score":[], 
@@ -37,6 +39,7 @@ def fetch_data():
 
         count = 1
 
+        # Feteching the required info from the subreddit posts
         for submission in top_subreddit:
             topics_dict["flair"].append(flairs[i])
             topics_dict["title"].append(submission.title)
@@ -56,6 +59,7 @@ def fetch_data():
                 if(comment_count==50):
                     break
             topics_dict["comments"].append(temp_comment)
+            # Counter to see the progress of downloading
             print("Flair count: " + str(i+1) + "  " + "Subreddit count: " + str(count) + "  Comment Count: " + str(comment_count))
             count+=1
 

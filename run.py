@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['POST'])
 def results():
+	# Here we are getting the URL which was submitted by the user and predicting the results for the same. 
 	if request.method == 'POST':
 		if 'submit_button' in request.form:
 			return render_template('index.html')
